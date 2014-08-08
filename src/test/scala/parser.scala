@@ -1,3 +1,5 @@
+package com.stephentu.sql
+
 import org.specs2.mutable._
 
 object Queries {

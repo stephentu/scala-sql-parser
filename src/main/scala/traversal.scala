@@ -1,3 +1,5 @@
+package com.stephentu.sql
+
 trait Traversals {
 
   def wrapReturnTrue[A](f: Node => A): Node => Boolean = (n: Node) => { f(n); true }

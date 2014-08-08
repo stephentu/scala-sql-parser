@@ -1,3 +1,5 @@
+package com.stephentu.sql
+
 trait Node extends PrettyPrinters {
   val ctx: Context
 

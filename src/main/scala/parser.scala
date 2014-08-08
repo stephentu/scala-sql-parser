@@ -1,3 +1,5 @@
+package com.stephentu.sql
+
 import scala.util.matching.Regex
 
 import scala.util.parsing.combinator._
