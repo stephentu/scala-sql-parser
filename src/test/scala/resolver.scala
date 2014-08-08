@@ -1,3 +1,5 @@
+package com.stephentu.sql
+
 import org.specs2.mutable._
 
 class ResolverSpec extends Specification {

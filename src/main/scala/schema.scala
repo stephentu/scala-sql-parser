@@ -1,3 +1,5 @@
+package com.stephentu.sql
+
 import java.sql._
 import java.util.Properties
 
