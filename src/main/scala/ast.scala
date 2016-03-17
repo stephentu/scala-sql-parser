@@ -86,24 +86,25 @@ case class Neq(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends Equality
   def copyWithChildren(lhs: SqlExpr, rhs: SqlExpr) = copy(lhs = lhs, rhs = rhs, ctx = null)
 }
 
+//wang Ge/Le/Gt/Lt 
 trait InequalityLike extends Binop
 case class Ge(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends InequalityLike {
-  val opStr = "<="
-  def copyWithContext(c: Context) = copy(ctx = c)
-  def copyWithChildren(lhs: SqlExpr, rhs: SqlExpr) = copy(lhs = lhs, rhs = rhs, ctx = null)
-}
-case class Gt(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends InequalityLike {
-  val opStr = "<"
-  def copyWithContext(c: Context) = copy(ctx = c)
-  def copyWithChildren(lhs: SqlExpr, rhs: SqlExpr) = copy(lhs = lhs, rhs = rhs, ctx = null)
-}
-case class Le(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends InequalityLike {
   val opStr = ">="
   def copyWithContext(c: Context) = copy(ctx = c)
   def copyWithChildren(lhs: SqlExpr, rhs: SqlExpr) = copy(lhs = lhs, rhs = rhs, ctx = null)
 }
-case class Lt(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends InequalityLike {
+case class Gt(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends InequalityLike {
   val opStr = ">"
+  def copyWithContext(c: Context) = copy(ctx = c)
+  def copyWithChildren(lhs: SqlExpr, rhs: SqlExpr) = copy(lhs = lhs, rhs = rhs, ctx = null)
+}
+case class Le(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends InequalityLike {
+  val opStr = "<="
+  def copyWithContext(c: Context) = copy(ctx = c)
+  def copyWithChildren(lhs: SqlExpr, rhs: SqlExpr) = copy(lhs = lhs, rhs = rhs, ctx = null)
+}
+case class Lt(lhs: SqlExpr, rhs: SqlExpr, ctx: Context = null) extends InequalityLike {
+  val opStr = "<"
   def copyWithContext(c: Context) = copy(ctx = c)
   def copyWithChildren(lhs: SqlExpr, rhs: SqlExpr) = copy(lhs = lhs, rhs = rhs, ctx = null)
 }
